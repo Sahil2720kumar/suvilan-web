@@ -2,7 +2,7 @@ import { NAV_ITEMS, FEATURES } from "@/data/suvilan-data";
 import { SuvilanLogo } from "@/components/SuvilanLogo";
 
 export function Footer() {
-  const availableFeatures = FEATURES.filter((f) => f.status === "");
+  const availableFeatures = FEATURES.filter((f) => f.status === "V1");
   const comingSoonFeatures = FEATURES.filter((f) => f.status === "Coming Soon");
 
   return (
