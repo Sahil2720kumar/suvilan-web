@@ -106,7 +106,7 @@ export const PROBLEM_GROUPS = [
       {
         issue: "Tracking online and cash payments cleanly",
         solution:
-          "A single role-based wallet and ledger tracks online earnings, Cash/COD collections, commissions, and net payable settlements transparently.",
+          "A single role-based wallet and ledger tracks online earnings, COD collections, commissions, and net payable settlements transparently.",
       },
     ],
   },
@@ -232,7 +232,7 @@ export const FEATURES: FeatureItem[] = [
       {
         title: "Choose payment & confirm",
         detail:
-          "Select Online Payment or Cash/COD (if eligible) to confirm the booking.",
+          "Select UPI, card, netbanking, or COD (if eligible) to confirm the booking.",
       },
       {
         title: "Complete & confirm",
@@ -242,7 +242,7 @@ export const FEATURES: FeatureItem[] = [
     ],
     example: {
       title: "Illustrative V1 Individual Booking",
-      body: "A resident has a leaking tap, selects Plumbing, and books individually for Saturday morning. The plumber quotes ₹1,000. The resident accepts, chooses Cash/COD, and pays ₹1,000 plus the ₹19 platform fee after completion. No group discount applies.",
+      body: "A resident has a leaking tap, selects Plumbing, and books individually for Saturday morning. The plumber quotes ₹1,000. The resident accepts, chooses COD, and pays ₹1,000 plus the ₹19 platform fee after completion. No group discount applies.",
     },
   },
   {
@@ -288,20 +288,20 @@ export const FEATURES: FeatureItem[] = [
   },
   {
     id: "flexible-payments",
-    title: "Flexible Payments (Online & Cash/COD)",
+    title: "Flexible Payments (UPI, Card, Netbanking & COD)",
     shortDescription:
-      "Choose Online Payment or Cash on Delivery per booking, with verified digital records and a structured Collect Payment flow.",
+      "Choose UPI, card, netbanking, or COD per booking, with verified digital records and a structured Collect Payment flow.",
     category: "Payments & Wallets",
     status: "V1",
     iconName: "CreditCard",
     summary:
-      "Suvilan supports both Online Payment (via payment gateway) and Cash/COD across individual bookings, V2 collective bookings, and shop orders—neither method is forced.",
+      "Suvilan supports UPI, card, netbanking, and COD across individual bookings, V2 collective bookings, and shop orders—neither method is forced.",
     problemSolved:
       "Gives residents flexibility to pay how they prefer while ensuring cash payments are accurately recorded so commissions and settlements stay balanced.",
     whyUseful:
       "Many neighbourhood customers prefer paying cash after inspecting completed work, while others prefer digital payments. Supporting both removes checkout friction.",
     whatUsersCanDo: [
-      "Choose Online Payment or Cash/COD independently for each booking.",
+      "Choose UPI, card, netbanking, or COD independently for each booking.",
       "Providers use the in-app Collect Payment action to record exact cash received after finishing a job.",
       "View itemized payment receipts and status history inside the app.",
     ],
@@ -311,7 +311,7 @@ export const FEATURES: FeatureItem[] = [
     ],
     importantCapabilities: [
       "Idempotent, atomic payment recording so retries never create duplicate credits or debits.",
-      "Automatic COD eligibility check before showing Cash/COD at checkout.",
+      "Automatic COD eligibility check before showing COD at checkout.",
       "Variance tracking if the cash collected differs from the expected amount.",
     ],
     businessRules: [
@@ -322,14 +322,14 @@ export const FEATURES: FeatureItem[] = [
     ],
     limitationsAndEdgeCases: [
       "Pending, failed, or unverified online payments are never treated as completed earnings.",
-      "If a provider has exceeded their negative balance limit, Cash/COD is hidden for new bookings while Online Payment remains available.",
+      "If a provider has exceeded their negative balance limit, COD is hidden for new bookings while UPI/card/netbanking remains available.",
     ],
     relatedFeatureIds: ["role-wallets", "individual-booking", "service-pools"],
     steps: [
       {
         title: "Choose payment method",
         detail:
-          "Select Online Payment or Cash/COD when confirming your booking.",
+          "Select UPI, card, netbanking, or COD when confirming your booking.",
       },
       {
         title: "Service completion",
@@ -378,7 +378,7 @@ export const FEATURES: FeatureItem[] = [
       "Every refund references the original transaction; duplicate refund credits are blocked, and money never collected is never refunded.",
     ],
     limitationsAndEdgeCases: [
-      "A negative balance restricts new COD bookings and withdrawals, but does not cancel already-accepted bookings and still allows Online Payment bookings.",
+      "A negative balance restricts new COD bookings and withdrawals, but does not cancel already-accepted bookings and still allows UPI/card/netbanking bookings.",
       "A screenshot or an unverified payment attempt never restores COD access—repayment must be verified in the ledger.",
     ],
     relatedFeatureIds: ["flexible-payments", "business-booster"],
@@ -525,7 +525,7 @@ export const FEATURES: FeatureItem[] = [
       "Discover and join open pools in your group, or leave a pool before it closes.",
       "Submit individual service requirements (issue, address, preferred schedule).",
       "Society Admins can create society-wide bulk Service Pools using the same system.",
-      "Review the selected provider quotation and independently accept or reject your own order and choose Online Payment or Cash/COD.",
+      "Review the selected provider quotation and independently accept or reject your own order and choose UPI, card, netbanking, or COD.",
     ],
     whoBenefits: [
       "Residents saving on collective service needs with zero ₹19 platform fee.",
@@ -534,7 +534,7 @@ export const FEATURES: FeatureItem[] = [
     ],
     importantCapabilities: [
       "Clear hierarchy: One Residential Group → Multiple Service Pools → Multiple Residents in Each Pool.",
-      "Per-resident independent decision and payment method (Online or COD).",
+      "Per-resident independent decision and payment method (UPI, card, netbanking, or COD).",
       "8% platform commission on the final discounted amount (vs. 12% individual).",
     ],
     businessRules: [
@@ -566,7 +566,7 @@ export const FEATURES: FeatureItem[] = [
       {
         title: "Independent confirmation",
         detail:
-          "Each resident accepts or rejects their own quote and picks Online Payment or Cash/COD.",
+          "Each resident accepts or rejects their own quote and picks UPI, card, netbanking, or COD.",
       },
       {
         title: "Final slab & service",
@@ -742,11 +742,11 @@ export const ROLE_BENEFITS = [
     label: "Residents",
     headline: "Reliable services at home, with collective savings ahead",
     description:
-      "Find trusted local technicians in V1, pay online or in cash, and unlock V2 community Service Pools when neighbours need the same service.",
+      "Find trusted local technicians in V1, pay via UPI, card, netbanking, or COD, and unlock V2 community Service Pools when neighbours need the same service.",
     points: [
       "Browse service categories and compare technician profiles, ratings, distance, and indicative prices (V1).",
       "Request quotations, coordinate via in-app chat, and rebook trusted technicians from history (V1).",
-      "Pay flexibly via Online Payment or Cash/COD per booking, with refunds credited to wallet or original method (V1).",
+      "Pay flexibly via UPI, card, netbanking, or COD per booking, with refunds credited to wallet or original method (V1).",
       "Discover local shops and neighbourhood alerts through Business Booster (V1).",
       "Join your Residential Group and participate in Service Pools for provider-defined discounts with the ₹19 fee waived (V2 Coming Soon).",
     ],
@@ -775,7 +775,7 @@ export const ROLE_BENEFITS = [
     points: [
       "KYC-verified profile with skills, service area, portfolio, and lead management (V1).",
       "0% platform commission on your verified own repeat customer bookings (V1).",
-      "Clear settlement tracking across Online Earnings and Cash/COD via Collect Payment (V1).",
+      "Clear settlement tracking across Online Earnings and COD via Collect Payment (V1).",
       "Discover nearby material suppliers when a job needs spare parts (V1).",
       "Configure your own category discount slabs and serve multiple confirmed homes in one society via V2 Service Pools (Coming Soon).",
     ],
@@ -790,7 +790,7 @@ export const ROLE_BENEFITS = [
       "List your shop profile with address, hours, photos, and product catalogue (V1).",
       "Send targeted 'New in your neighbourhood' alerts within 1 km, 3 km, or 5 km (V1).",
       "View measurable analytics: profile views, followers, and alert reach (V1).",
-      "Accept Online Payment or Cash/COD for shop orders with dedicated Shop Owner Wallet tracking (V1).",
+      "Accept UPI, card, netbanking, or COD for shop orders with dedicated Shop Owner Wallet tracking (V1).",
       "Pay for Booster plans via wallet or digital payment—never deducted silently from shop sales (V1).",
     ],
   },
@@ -820,7 +820,7 @@ export const WHY_SUVILAN_POINTS = [
   {
     title: "True payment flexibility with clean reconciliation",
     description:
-      "Both Online Payment and Cash/COD are supported everywhere, backed by one immutable wallet ledger and Collect Payment verification.",
+      "UPI, card, netbanking, and COD are supported everywhere, backed by one immutable wallet ledger and Collect Payment verification.",
   },
   {
     title: "Measurable local visibility for neighbourhood shops",
@@ -843,7 +843,7 @@ export const FAQ_ITEMS = [
   {
     question: "What is available in V1 vs. Coming Soon (V2)?",
     answer:
-      "V1 includes individual service discovery and booking, quotations, Online Payment and Cash/COD with Collect Payment, role-based wallets and settlements. Residential Groups, Service Pools, society-wide pools, provider-defined discount slabs, and neighbour networking,spare-parts supplier discovery, and Neighbourhood Business Booster are part of V2 (Coming Soon).",
+      "V1 includes individual service discovery and booking, quotations, UPI/card/netbanking and COD with Collect Payment, role-based wallets and settlements. Residential Groups, Service Pools, society-wide pools, provider-defined discount slabs, and neighbour networking,spare-parts supplier discovery, and Neighbourhood Business Booster are part of V2 (Coming Soon).",
   },
   {
     question: "How can residents join a neighbourhood group (V2)?",
@@ -880,9 +880,9 @@ export const FAQ_ITEMS = [
       "If a provider rejects an individual service request or a resident declines a quotation, the booking is not confirmed and no payment is captured.",
   },
   {
-    question: "What payment methods are supported and how does Cash/COD work?",
+    question: "What payment methods are supported and how does COD work?",
     answer:
-      "Suvilan supports both Online Payment (via payment gateway) and Cash/COD across individual bookings, V2 collective bookings (chosen independently per resident), and shop orders. For COD, the provider completes the work and taps Collect Payment in the app to record the physical cash received. If the amount differs from the expected total, a variance reason is required and flagged for review.",
+      "Suvilan supports UPI, card, netbanking, and COD across individual bookings, V2 collective bookings (chosen independently per resident), and shop orders. For COD, the provider completes the work and taps Collect Payment in the app to record the physical cash received. If the amount differs from the expected total, a variance reason is required and flagged for review.",
   },
   {
     question:
@@ -894,7 +894,7 @@ export const FAQ_ITEMS = [
     question:
       "What is the Suvilan Wallet, and what happens if a provider hits the negative balance limit?",
     answer:
-      "Every role—Resident, Service Provider, Society Admin, and Shop Owner—has a wallet backed by an immutable ledger. For providers, COD cash collected is deducted during settlement so cash isn't paid twice. If a provider's negative balance reaches the configured limit (e.g., −₹2,000 illustrative), new COD bookings and withdrawals are blocked while Online Payment bookings remain available and existing bookings are not cancelled. Repaying digitally via Clear Outstanding Balance restores COD eligibility once verified.",
+      "Every role—Resident, Service Provider, Society Admin, and Shop Owner—has a wallet backed by an immutable ledger. For providers, COD cash collected is deducted during settlement so cash isn't paid twice. If a provider's negative balance reaches the configured limit (e.g., −₹2,000 illustrative), new COD bookings and withdrawals are blocked while UPI/card/netbanking bookings remain available and existing bookings are not cancelled. Repaying digitally via Clear Outstanding Balance restores COD eligibility once verified.",
   },
   {
     question: "How do Service Providers earn and participate on Suvilan?",

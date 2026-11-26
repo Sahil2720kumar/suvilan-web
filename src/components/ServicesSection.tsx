@@ -34,7 +34,7 @@ export function ServicesSection() {
           </div>
           <p className="max-w-xs text-sm text-muted-foreground">
             Transparent profiles, upfront quotations, and your choice of Online
-            Payment or Cash/COD on every booking.
+            UPI, card, netbanking, or COD on every booking.
           </p>
         </motion.div>
 

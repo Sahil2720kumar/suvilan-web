@@ -31,7 +31,7 @@ export function FeatureSection({
   onSelectFeature,
 }: FeatureSectionProps) {
   const [activeCategory, setActiveCategory] = useState<"All" | FeatureCategory>(
-    "All"
+    "All",
   );
 
   const visibleFeatures =
@@ -81,7 +81,7 @@ export function FeatureSection({
                   "rounded-full border px-4 py-2 text-sm font-medium transition-colors",
                   active
                     ? "border-primary bg-primary text-primary-foreground shadow-xs"
-                    : "border-border bg-card text-muted-foreground hover:bg-muted hover:text-foreground"
+                    : "border-border bg-card text-muted-foreground hover:bg-muted hover:text-foreground",
                 )}
               >
                 {category}
@@ -110,10 +110,7 @@ export function FeatureSection({
           className="mt-14 grid gap-6 lg:grid-cols-12"
         >
           <div className="rounded-3xl border border-border bg-card p-6 shadow-xs sm:p-8 lg:col-span-6">
-            <Badge
-              variant="outline"
-              className="border-primary/30 text-primary"
-            >
+            <Badge variant="outline" className="border-primary/30 text-primary">
               Coming Soon • Community Architecture
             </Badge>
             <h3 className="mt-3 text-xl font-bold text-foreground sm:text-2xl">
@@ -139,8 +136,8 @@ export function FeatureSection({
                   2. Multiple Service Pools
                 </p>
                 <p className="mt-1 text-sm text-foreground">
-                  Independent pools inside the group—such as a Plumbing Pool,
-                  AC Repair Pool, or Society-Wide Pool.
+                  Independent pools inside the group—such as a Plumbing Pool, AC
+                  Repair Pool, or Society-Wide Pool.
                 </p>
               </div>
               <div className="rounded-2xl border border-border bg-muted/45 p-4">
@@ -149,17 +146,14 @@ export function FeatureSection({
                 </p>
                 <p className="mt-1 text-sm text-foreground">
                   Each resident submits their own requirement, accepts their own
-                  quote, and chooses Online Payment or Cash/COD.
+                  quote, and chooses UPI, card, netbanking, or COD.
                 </p>
               </div>
             </div>
           </div>
 
           <div className="rounded-3xl border border-border bg-card p-6 shadow-xs sm:p-8 lg:col-span-6">
-            <Badge
-              variant="outline"
-              className="border-primary/30 text-primary"
-            >
+            <Badge variant="outline" className="border-primary/30 text-primary">
               Illustrative Example Only • Coming Soon
             </Badge>
             <h3 className="mt-3 text-xl font-bold text-foreground sm:text-2xl">
@@ -199,10 +193,10 @@ export function FeatureSection({
             </div>
 
             <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-              Note: Percentages above are illustrative examples from the
-              product blueprint, not fixed platform-wide tiers. If fewer
-              residents confirm than estimated and the price rises, residents
-              must re-accept the updated price.
+              Note: Percentages above are illustrative examples from the product
+              blueprint, not fixed platform-wide tiers. If fewer residents
+              confirm than estimated and the price rises, residents must
+              re-accept the updated price.
             </p>
           </div>
         </motion.div>

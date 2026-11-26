@@ -22,7 +22,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden border-b border-border/60 bg-background py-16 sm:py-24 lg:py-28"
+      className="relative overflow-hidden border-b border-border/60 bg-background pt-5 pb-16 sm:pb-24 sm:pt-10 lg:py-28 lg:pt-12"
     >
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-8">
         <motion.div
@@ -75,7 +75,7 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-2.5 text-sm text-muted-foreground">
               <CreditCard className="size-4 shrink-0 text-primary" />
-              <span>Online &amp; Cash/COD</span>
+              <span>UPI, Card, Netbanking &amp; COD</span>
             </div>
             <div className="flex items-center gap-2.5 text-sm text-muted-foreground">
               <Users className="size-4 shrink-0 text-primary" />
@@ -103,7 +103,7 @@ export function HeroSection() {
                 </h2>
                 <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
                   Compare verified local technicians, get clear quotes, chat
-                  in-app, and pay online or via Cash/COD.
+                  in-app, and pay via UPI, card, netbanking, or COD.
                 </p>
               </div>
 
